@@ -132,6 +132,13 @@ object Main {
     objectMapper.registerModule(new JavaTimeModule)
 
     println(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(you))
+
+    // 출력 결과
+    // {
+    //   "name" : "Kim",
+    //   "hasCat" : true,
+    //   "birthDate" : [ 2000, 11, 23 ]
+    // }
   }
 
   case class LocalDateCustomFormat2(
@@ -163,7 +170,7 @@ object Main {
     // {
     //   "name" : "Kim",
     //   "hasCat" : true,
-    //   "birthDate" : [ 2000, 11, 23 ]
+    //   "birthDate" : "2000-11-23"
     // }
   }
 
@@ -197,7 +204,7 @@ object Main {
     // {
     //   "name" : "Kim",
     //   "hasCat" : true,
-    //   "birthDate" : "2000-11-23"
+    //   "birthDate" : "2000.11.23"
     // }
   }
 
